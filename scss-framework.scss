@@ -1,0 +1,190 @@
+@mixin border-radius($radius)
+{
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -o-border-radius: $radius;
+    -khtml-border-radius: $radius;
+    -ms-border-radius: $radius;
+}
+
+@mixin height($height)
+{
+	height:$height;
+}
+
+@mixin width($width)
+{
+	width:$width;
+}
+
+@mixin float($float)
+{
+	float:$float;
+}
+
+@mixin display($display)
+{
+	display:$display;
+}
+
+@mixin position($position)
+{
+	position:$position;
+}
+
+@mixin padding($padding)
+{
+	padding:$padding;
+}
+
+@mixin margin($margin)
+{
+	margin:$margin;
+}
+
+@mixin border($border)
+{
+	border:$border;
+}
+
+@mixin background($color, $attached, $imgpath, $size, $position, $repeat, $origin, $clip) {
+    -webkit-background: {
+    color:$color;
+    attachment:$attached;
+    image: url($imgpath);
+    size:$size;
+    position:$position;
+    repeat : $repeat;
+    origin:$origin;
+    clip:$clip;
+    }
+    -moz-background: {
+    color:$color;
+    attachment:$attached;
+    image: url($imgpath);
+    size:$size;
+    position:$position;
+    repeat : $repeat;
+    origin:$origin;
+    clip:$clip;
+    }
+    -o-background: {
+    color:$color;
+    attachment:$attached;
+    image: url($imgpath);
+    size:$size;
+    position:$position;
+    repeat : $repeat;
+    origin:$origin;
+    clip:$clip;
+    }
+    background: {
+    color:$color;
+    attachment:$attached;
+    image: url($imgpath);
+    size:$size;
+    position:$position;
+    repeat : $repeat;
+    origin:$origin;
+    clip:$clip;
+    }
+}
+
+@mixin font($family, $size, $style, $variant, $weight)
+{
+  font:{
+  family:$fmaily;
+  size:$size;
+  style:$style;
+  variant:$variant;
+  weight:$weight;
+  }
+}
+
+@mixin keyframe ($animation-name)
+{
+  @-webkit-keyframes #{$animation-name}
+  {
+    @content
+  }
+  @-moz-keyframes #{$animation-name}
+  {
+    @content
+  }
+  @-o-keyframes #{$animation-name}
+  {
+    @content
+  }
+  @keyframes #{$animation-name}
+  {
+    @content
+  }
+}
+
+@mixin animation ($delay, $direction, $duration, $fill, $iteration, $name, $play, $transition)
+{
+    -webkit-animation-delay: $delay;
+    -webkit-animation-direction: $direction;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-fill: $fill;
+    -webkit-animation-iteration: $iteration;
+    -webkit-animation-name: $name;
+    -webkit-animation-play: $play;
+    -webkit-animation-timing-function: $iteration
+    -moz-animation-delay: $delay;
+    -moz-animation-direction: $direction;
+    -moz-animation-duration: $duration;
+    -moz-animation-fill: $fill;
+    -moz-animation-iteration: $iteration;
+    -moz-animation-name: $name;
+    -moz-animation-play: $play;
+    -moz-animation-timing-function: $iteration
+    -o-animation-delay: $delay;
+    -o-animation-direction: $direction;
+    -o-animation-duration: $duration;
+    -o-animation-fill: $fill;
+    -o-animation-iteration: $iteration;
+    -o-animation-name: $name;
+    -o-animation-play: $play;
+    -o-animation-timing-function: $iteration
+    animation-delay: $delay;
+    animation-direction: $direction;
+    animation-duration: $duration;
+    animation-fill: $fill;
+    animation-iteration: $iteration;
+    animation-name: $name;
+    animation-play: $play;
+    animation-timing-function: $iteration
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+} 
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+
+
